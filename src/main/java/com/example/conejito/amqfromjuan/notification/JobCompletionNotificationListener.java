@@ -19,12 +19,9 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
     private PersonServices personServices;
 
 //    @Autowired
-  //  public JobCompletionNotificationListener(PersonServices personServices) {
-      //  this.personServices = personServices;
+    //  public JobCompletionNotificationListener(PersonServices personServices) {
+    //  this.personServices = personServices;
     //}
-
-
-
 
 
     @Override

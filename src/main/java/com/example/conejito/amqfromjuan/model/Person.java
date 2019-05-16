@@ -1,6 +1,7 @@
 package com.example.conejito.amqfromjuan.model;
 
-import lombok.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -11,7 +12,7 @@ import java.io.Serializable;
 @Data
 @NoArgsConstructor
 // Dear juan always implement serializeable , for example to work with amq
-public class Person  implements Serializable {
+public class Person implements Serializable {
     @Id
     private String commentId;
     private String lastName;
@@ -23,7 +24,6 @@ public class Person  implements Serializable {
         this.firstName = firstName;
         this.lastName = lastName;
     }
-
 
 
 }

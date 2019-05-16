@@ -12,14 +12,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class Consumer {
 
+    private static final Logger log = LoggerFactory.getLogger(PersonItemProcessor.class);
     @Autowired
     public PersonServices personServices;
 
-    private static final Logger log = LoggerFactory.getLogger(PersonItemProcessor.class);
-
-
-
-    @RabbitListener(queues="${jsa.rabbitmq.queue}")
+    @RabbitListener(queues = "${jsa.rabbitmq.queue}")
     //https://www.youtube.com/watch?time_continue=188&v=QS6Glk74oYg
     //https://grokonez.com/java-integration/distributed-system/create-spring-rabbitmq-producerconsumer-application-springboot
     public void recievedMessage(Person msg) {

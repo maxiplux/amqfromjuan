@@ -1,7 +1,6 @@
 package com.example.conejito.amqfromjuan.amq;
 
 import com.example.conejito.amqfromjuan.model.Person;
-import com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.AmqpTemplate;
@@ -25,18 +24,14 @@ public class Producer {
     private AmqpTemplate amqpTemplate;
 
 
-
-
-    public void produceMsg(String msg)
-    {
+    public void produceMsg(String msg) {
         amqpTemplate.convertAndSend(exchange, routingKey, msg);
 
         log.info("Send msg = " + msg);
     }
 
 
-    public void produceMsg(Person msg)
-    {
+    public void produceMsg(Person msg) {
         amqpTemplate.convertAndSend(exchange, routingKey, msg);
 
         log.info("I AM RABBIT MQ AND SOMEONE SEND SOMETHING TO OUR QUEUE " + msg);

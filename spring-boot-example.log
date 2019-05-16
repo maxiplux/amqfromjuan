@@ -1,0 +1,356 @@
+logdate=(2019-05-16T12:01:33,543) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.AmqfromjuanApplication) message=(Starting AmqfromjuanApplication on WAS-FPJ2XT2 with PID 14248 (C:\Users\jumosque\Downloads\amqfromjuan\amqfromjuan\target\classes started by jumosque in C:\Users\jumosque\Downloads\amqfromjuan\amqfromjuan))
+logdate=(2019-05-16T12:01:33,552) thread=(main)) level=(DEBUG) loggerclass=(com.example.conejito.amqfromjuan.AmqfromjuanApplication) message=(Running with Spring Boot v2.2.0.M2, Spring v5.2.0.M1)
+logdate=(2019-05-16T12:01:33,555) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.AmqfromjuanApplication) message=(No active profile set, falling back to default profiles: default)
+logdate=(2019-05-16T12:01:39,024) thread=(main)) level=(ERROR) loggerclass=(com.zaxxer.hikari.pool.HikariPool) message=(HikariPool-1 - Exception during pool initialization.)
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:353) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:562) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.3.1.jar:?]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:335) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:372) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.batch.support.DatabaseType.fromMetaData(DatabaseType.java:102) ~[spring-batch-infrastructure-4.2.0.M1.jar:4.2.0.M1]
+	at org.springframework.batch.core.repository.support.JobRepositoryFactoryBean.afterPropertiesSet(JobRepositoryFactoryBean.java:183) ~[spring-batch-core-4.2.0.M1.jar:4.2.0.M1]
+	at org.springframework.boot.autoconfigure.batch.BasicBatchConfigurer.createJobRepository(BasicBatchConfigurer.java:131) ~[spring-boot-autoconfigure-2.2.0.M2.jar:2.2.0.M2]
+	at org.springframework.boot.autoconfigure.batch.BasicBatchConfigurer.initialize(BasicBatchConfigurer.java:96) ~[spring-boot-autoconfigure-2.2.0.M2.jar:2.2.0.M2]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_211]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_211]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_211]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_211]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:414) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) [spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) [spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) [spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:866) [spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) [spring-context-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) [spring-context-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782) [spring-boot-2.2.0.M2.jar:2.2.0.M2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:404) [spring-boot-2.2.0.M2.jar:2.2.0.M2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319) [spring-boot-2.2.0.M2.jar:2.2.0.M2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1275) [spring-boot-2.2.0.M2.jar:2.2.0.M2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1263) [spring-boot-2.2.0.M2.jar:2.2.0.M2]
+	at com.example.conejito.amqfromjuan.AmqfromjuanApplication.main(AmqfromjuanApplication.java:10) [classes/:?]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_211]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_211]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_211]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_211]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:152) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	... 43 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_211]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[?:1.8.0_211]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_211]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_211]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_211]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_211]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_211]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_211]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:152) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	... 43 more
+logdate=(2019-05-16T12:01:39,034) thread=(main)) level=(WARN) loggerclass=(org.springframework.context.annotation.AnnotationConfigApplicationContext) message=(Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'batchConfigurer': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Unable to initialize Spring Batch)
+logdate=(2019-05-16T12:01:39,049) thread=(main)) level=(ERROR) loggerclass=(org.springframework.boot.SpringApplication) message=(Application run failed)
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'batchConfigurer': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Unable to initialize Spring Batch
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:160) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:414) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:866) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782) [spring-boot-2.2.0.M2.jar:2.2.0.M2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:404) [spring-boot-2.2.0.M2.jar:2.2.0.M2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:319) [spring-boot-2.2.0.M2.jar:2.2.0.M2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1275) [spring-boot-2.2.0.M2.jar:2.2.0.M2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1263) [spring-boot-2.2.0.M2.jar:2.2.0.M2]
+	at com.example.conejito.amqfromjuan.AmqfromjuanApplication.main(AmqfromjuanApplication.java:10) [classes/:?]
+Caused by: java.lang.IllegalStateException: Unable to initialize Spring Batch
+	at org.springframework.boot.autoconfigure.batch.BasicBatchConfigurer.initialize(BasicBatchConfigurer.java:101) ~[spring-boot-autoconfigure-2.2.0.M2.jar:2.2.0.M2]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_211]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_211]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_211]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_211]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	... 17 more
+Caused by: org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta-data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:344) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:372) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.batch.support.DatabaseType.fromMetaData(DatabaseType.java:102) ~[spring-batch-infrastructure-4.2.0.M1.jar:4.2.0.M1]
+	at org.springframework.batch.core.repository.support.JobRepositoryFactoryBean.afterPropertiesSet(JobRepositoryFactoryBean.java:183) ~[spring-batch-core-4.2.0.M1.jar:4.2.0.M1]
+	at org.springframework.boot.autoconfigure.batch.BasicBatchConfigurer.createJobRepository(BasicBatchConfigurer.java:131) ~[spring-boot-autoconfigure-2.2.0.M2.jar:2.2.0.M2]
+	at org.springframework.boot.autoconfigure.batch.BasicBatchConfigurer.initialize(BasicBatchConfigurer.java:96) ~[spring-boot-autoconfigure-2.2.0.M2.jar:2.2.0.M2]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_211]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_211]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_211]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_211]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	... 17 more
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:335) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:372) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.batch.support.DatabaseType.fromMetaData(DatabaseType.java:102) ~[spring-batch-infrastructure-4.2.0.M1.jar:4.2.0.M1]
+	at org.springframework.batch.core.repository.support.JobRepositoryFactoryBean.afterPropertiesSet(JobRepositoryFactoryBean.java:183) ~[spring-batch-core-4.2.0.M1.jar:4.2.0.M1]
+	at org.springframework.boot.autoconfigure.batch.BasicBatchConfigurer.createJobRepository(BasicBatchConfigurer.java:131) ~[spring-boot-autoconfigure-2.2.0.M2.jar:2.2.0.M2]
+	at org.springframework.boot.autoconfigure.batch.BasicBatchConfigurer.initialize(BasicBatchConfigurer.java:96) ~[spring-boot-autoconfigure-2.2.0.M2.jar:2.2.0.M2]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_211]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_211]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_211]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_211]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	... 17 more
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:835) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:353) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:562) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.3.1.jar:?]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:335) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:372) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.batch.support.DatabaseType.fromMetaData(DatabaseType.java:102) ~[spring-batch-infrastructure-4.2.0.M1.jar:4.2.0.M1]
+	at org.springframework.batch.core.repository.support.JobRepositoryFactoryBean.afterPropertiesSet(JobRepositoryFactoryBean.java:183) ~[spring-batch-core-4.2.0.M1.jar:4.2.0.M1]
+	at org.springframework.boot.autoconfigure.batch.BasicBatchConfigurer.createJobRepository(BasicBatchConfigurer.java:131) ~[spring-boot-autoconfigure-2.2.0.M2.jar:2.2.0.M2]
+	at org.springframework.boot.autoconfigure.batch.BasicBatchConfigurer.initialize(BasicBatchConfigurer.java:96) ~[spring-boot-autoconfigure-2.2.0.M2.jar:2.2.0.M2]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_211]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_211]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_211]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_211]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	... 17 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_211]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_211]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_211]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_211]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:152) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:353) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:562) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.3.1.jar:?]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:335) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:372) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.batch.support.DatabaseType.fromMetaData(DatabaseType.java:102) ~[spring-batch-infrastructure-4.2.0.M1.jar:4.2.0.M1]
+	at org.springframework.batch.core.repository.support.JobRepositoryFactoryBean.afterPropertiesSet(JobRepositoryFactoryBean.java:183) ~[spring-batch-core-4.2.0.M1.jar:4.2.0.M1]
+	at org.springframework.boot.autoconfigure.batch.BasicBatchConfigurer.createJobRepository(BasicBatchConfigurer.java:131) ~[spring-boot-autoconfigure-2.2.0.M2.jar:2.2.0.M2]
+	at org.springframework.boot.autoconfigure.batch.BasicBatchConfigurer.initialize(BasicBatchConfigurer.java:96) ~[spring-boot-autoconfigure-2.2.0.M2.jar:2.2.0.M2]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_211]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_211]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_211]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_211]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	... 17 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_211]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[?:1.8.0_211]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_211]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_211]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_211]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_211]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_211]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_211]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:152) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:955) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:455) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:240) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.15.jar:8.0.15]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:353) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:473) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:562) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.3.1.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.3.1.jar:?]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:335) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:372) ~[spring-jdbc-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.batch.support.DatabaseType.fromMetaData(DatabaseType.java:102) ~[spring-batch-infrastructure-4.2.0.M1.jar:4.2.0.M1]
+	at org.springframework.batch.core.repository.support.JobRepositoryFactoryBean.afterPropertiesSet(JobRepositoryFactoryBean.java:183) ~[spring-batch-core-4.2.0.M1.jar:4.2.0.M1]
+	at org.springframework.boot.autoconfigure.batch.BasicBatchConfigurer.createJobRepository(BasicBatchConfigurer.java:131) ~[spring-boot-autoconfigure-2.2.0.M2.jar:2.2.0.M2]
+	at org.springframework.boot.autoconfigure.batch.BasicBatchConfigurer.initialize(BasicBatchConfigurer.java:96) ~[spring-boot-autoconfigure-2.2.0.M2.jar:2.2.0.M2]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_211]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_211]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_211]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_211]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157) ~[spring-beans-5.2.0.M1.jar:5.2.0.M1]
+	... 17 more
+logdate=(2019-05-16T12:02:58,074) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.AmqfromjuanApplication) message=(Starting AmqfromjuanApplication on WAS-FPJ2XT2 with PID 12476 (C:\Users\jumosque\Downloads\amqfromjuan\amqfromjuan\target\classes started by jumosque in C:\Users\jumosque\Downloads\amqfromjuan\amqfromjuan))
+logdate=(2019-05-16T12:02:58,084) thread=(main)) level=(DEBUG) loggerclass=(com.example.conejito.amqfromjuan.AmqfromjuanApplication) message=(Running with Spring Boot v2.2.0.M2, Spring v5.2.0.M1)
+logdate=(2019-05-16T12:02:58,085) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.AmqfromjuanApplication) message=(No active profile set, falling back to default profiles: default)
+logdate=(2019-05-16T12:03:04,840) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.AmqfromjuanApplication) message=(Started AmqfromjuanApplication in 7.344 seconds (JVM running for 9.059))
+logdate=(2019-05-16T12:03:05,505) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.procesor.PersonItemProcessor) message=(Converting (Person(commentId=null, lastName=Doe, firstName=Jill, seq=0)) into (Person(commentId=null, lastName=DOE, firstName=JILL, seq=0)))
+logdate=(2019-05-16T12:03:05,506) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.procesor.PersonItemProcessor) message=(Converting (Person(commentId=null, lastName=Doe, firstName=Joe, seq=0)) into (Person(commentId=null, lastName=DOE, firstName=JOE, seq=0)))
+logdate=(2019-05-16T12:03:05,506) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.procesor.PersonItemProcessor) message=(Converting (Person(commentId=null, lastName=Doe, firstName=Justin, seq=0)) into (Person(commentId=null, lastName=DOE, firstName=JUSTIN, seq=0)))
+logdate=(2019-05-16T12:03:05,506) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.procesor.PersonItemProcessor) message=(Converting (Person(commentId=null, lastName=Doe, firstName=Jane, seq=0)) into (Person(commentId=null, lastName=DOE, firstName=JANE, seq=0)))
+logdate=(2019-05-16T12:03:05,507) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.procesor.PersonItemProcessor) message=(Converting (Person(commentId=null, lastName=Doe, firstName=John, seq=0)) into (Person(commentId=null, lastName=DOE, firstName=JOHN, seq=0)))
+logdate=(2019-05-16T12:03:05,545) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.amq.Producer) message=(I AM RABBIT MQ AND SOMEONE SEND SOMETHING TO OUR QUEUE Person(commentId=null, lastName=DOE, firstName=JILL, seq=0))
+logdate=(2019-05-16T12:03:05,546) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.amq.Producer) message=(I AM RABBIT MQ AND SOMEONE SEND SOMETHING TO OUR QUEUE Person(commentId=null, lastName=DOE, firstName=JOE, seq=0))
+logdate=(2019-05-16T12:03:05,546) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.amq.Producer) message=(I AM RABBIT MQ AND SOMEONE SEND SOMETHING TO OUR QUEUE Person(commentId=null, lastName=DOE, firstName=JUSTIN, seq=0))
+logdate=(2019-05-16T12:03:05,547) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.amq.Producer) message=(I AM RABBIT MQ AND SOMEONE SEND SOMETHING TO OUR QUEUE Person(commentId=null, lastName=DOE, firstName=JANE, seq=0))
+logdate=(2019-05-16T12:03:05,548) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.amq.Producer) message=(I AM RABBIT MQ AND SOMEONE SEND SOMETHING TO OUR QUEUE Person(commentId=null, lastName=DOE, firstName=JOHN, seq=0))
+logdate=(2019-05-16T12:03:05,627) thread=(org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.procesor.PersonItemProcessor) message=(I am Rabbit Mq, I am reading my queue and I found : Person(commentId=null, lastName=DOE, firstName=JILL, seq=0))
+logdate=(2019-05-16T12:03:05,637) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(!!! JOB FINISHED! Time to verify the results)
+logdate=(2019-05-16T12:03:05,962) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc623c9211d05cd88c0a52, lastName=DOE, firstName=JILL, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,963) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc623c9211d05cd88c0a53, lastName=DOE, firstName=JOE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,963) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc623c9211d05cd88c0a54, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,964) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc623c9211d05cd88c0a55, lastName=DOE, firstName=JANE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,964) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc623c9211d05cd88c0a56, lastName=DOE, firstName=JOHN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,964) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc643c5b94e50086d32480, lastName=DOE, firstName=JILL, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,964) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc643c5b94e50086d32481, lastName=DOE, firstName=JOE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,964) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc643c5b94e50086d32482, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,965) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc643c5b94e50086d32483, lastName=DOE, firstName=JANE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,965) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc643c5b94e50086d32484, lastName=DOE, firstName=JOHN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,965) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc7c15309e2775befb0856, lastName=DOE, firstName=JILL, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,965) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc7c15309e2775befb0857, lastName=DOE, firstName=JOE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,966) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc7c15309e2775befb0858, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,966) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc7c15309e2775befb0859, lastName=DOE, firstName=JANE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,966) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc7c15309e2775befb085a, lastName=DOE, firstName=JOHN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,966) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc89df6c9dcf0ae34894a2, lastName=DOE, firstName=JILL, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,967) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc89df6c9dcf0ae34894a3, lastName=DOE, firstName=JOE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,967) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc89df6c9dcf0ae34894a4, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,967) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc89df6c9dcf0ae34894a5, lastName=DOE, firstName=JANE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,967) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc89df6c9dcf0ae34894a6, lastName=DOE, firstName=JOHN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,968) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc8a421af48c0d048f5a0d, lastName=DOE, firstName=JILL, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,968) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc8a421af48c0d048f5a0e, lastName=DOE, firstName=JOE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,968) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc8a421af48c0d048f5a0f, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,968) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc8a421af48c0d048f5a10, lastName=DOE, firstName=JANE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,968) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc8a421af48c0d048f5a11, lastName=DOE, firstName=JOHN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,969) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc8a8242d0775e7e0827a5, lastName=DOE, firstName=JILL, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,969) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc8a8242d0775e7e0827a6, lastName=DOE, firstName=JOE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,969) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc8a8242d0775e7e0827a7, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,969) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc8a8342d0775e7e0827a8, lastName=DOE, firstName=JANE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,969) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdc8a8342d0775e7e0827a9, lastName=DOE, firstName=JOHN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,970) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd7c5648dec005433146cd, lastName=DOE, firstName=JILL, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,970) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd7c5648dec005433146ce, lastName=DOE, firstName=JOE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,970) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd7c5648dec005433146cf, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,971) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd7c5648dec005433146d0, lastName=DOE, firstName=JANE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,971) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd7c5648dec005433146d1, lastName=DOE, firstName=JOHN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,971) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd7f2d72736a2b0d034aca, lastName=DOE, firstName=JILL, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,972) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd7f2d72736a2b0d034acb, lastName=DOE, firstName=JOE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,972) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd7f2d72736a2b0d034acc, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,972) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd7f2d72736a2b0d034acd, lastName=DOE, firstName=JANE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,972) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd7f2d72736a2b0d034ace, lastName=DOE, firstName=JOHN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,973) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd809e6842764f2d6a7332, lastName=DOE, firstName=JILL, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,973) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd809e6842764f2d6a7333, lastName=DOE, firstName=JOE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,973) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd809e6842764f2d6a7334, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,974) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd809e6842764f2d6a7335, lastName=DOE, firstName=JANE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,974) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd809e6842764f2d6a7336, lastName=DOE, firstName=JOHN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,974) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd827531e2163db127090b, lastName=DOE, firstName=JILL, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,974) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd827531e2163db127090c, lastName=DOE, firstName=JOE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,975) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd827531e2163db127090d, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,975) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd827531e2163db127090e, lastName=DOE, firstName=JANE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,975) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd827531e2163db127090f, lastName=DOE, firstName=JOHN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,975) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd82e1ad37a83247e79dca, lastName=DOE, firstName=JILL, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,976) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd82e1ad37a83247e79dcb, lastName=DOE, firstName=JOE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,976) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd82e1ad37a83247e79dcc, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,976) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd82e1ad37a83247e79dcd, lastName=DOE, firstName=JANE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,976) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd82e1ad37a83247e79dce, lastName=DOE, firstName=JOHN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,977) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd8322edb9d6714e08fa3d, lastName=DOE, firstName=JILL, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,977) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd8322edb9d6714e08fa3e, lastName=DOE, firstName=JOE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,977) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd8322edb9d6714e08fa3f, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,977) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd8322edb9d6714e08fa40, lastName=DOE, firstName=JANE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,978) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd8322edb9d6714e08fa41, lastName=DOE, firstName=JOHN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,978) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd842b5c6aba694832cc58, lastName=DOE, firstName=JILL, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,978) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd842c5c6aba694832cc59, lastName=DOE, firstName=JOE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,978) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd842c5c6aba694832cc5a, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,978) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd842c5c6aba694832cc5b, lastName=DOE, firstName=JANE, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,979) thread=(main)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.notification.JobCompletionNotificationListener) message=(Found <Person(commentId=5cdd842c5c6aba694832cc5c, lastName=DOE, firstName=JOHN, seq=0)> in the database.)
+logdate=(2019-05-16T12:03:05,984) thread=(org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.procesor.PersonItemProcessor) message=(I'm taking this information and put on mongodb   Person(commentId=5cdd89b9fd6def0802a82102, lastName=DOE, firstName=JILL, seq=0))
+logdate=(2019-05-16T12:03:05,985) thread=(org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.procesor.PersonItemProcessor) message=(I am Rabbit Mq, I am reading my queue and I found : Person(commentId=null, lastName=DOE, firstName=JOE, seq=0))
+logdate=(2019-05-16T12:03:05,992) thread=(org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.procesor.PersonItemProcessor) message=(I'm taking this information and put on mongodb   Person(commentId=5cdd89b9fd6def0802a82103, lastName=DOE, firstName=JOE, seq=0))
+logdate=(2019-05-16T12:03:05,994) thread=(org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.procesor.PersonItemProcessor) message=(I am Rabbit Mq, I am reading my queue and I found : Person(commentId=null, lastName=DOE, firstName=JUSTIN, seq=0))
+logdate=(2019-05-16T12:03:05,999) thread=(org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.procesor.PersonItemProcessor) message=(I'm taking this information and put on mongodb   Person(commentId=5cdd89b9fd6def0802a82104, lastName=DOE, firstName=JUSTIN, seq=0))
+logdate=(2019-05-16T12:03:06,001) thread=(org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.procesor.PersonItemProcessor) message=(I am Rabbit Mq, I am reading my queue and I found : Person(commentId=null, lastName=DOE, firstName=JANE, seq=0))
+logdate=(2019-05-16T12:03:06,006) thread=(org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.procesor.PersonItemProcessor) message=(I'm taking this information and put on mongodb   Person(commentId=5cdd89bafd6def0802a82105, lastName=DOE, firstName=JANE, seq=0))
+logdate=(2019-05-16T12:03:06,007) thread=(org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.procesor.PersonItemProcessor) message=(I am Rabbit Mq, I am reading my queue and I found : Person(commentId=null, lastName=DOE, firstName=JOHN, seq=0))
+logdate=(2019-05-16T12:03:06,011) thread=(org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1)) level=(INFO) loggerclass=(com.example.conejito.amqfromjuan.procesor.PersonItemProcessor) message=(I'm taking this information and put on mongodb   Person(commentId=5cdd89bafd6def0802a82106, lastName=DOE, firstName=JOHN, seq=0))

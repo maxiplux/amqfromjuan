@@ -27,14 +27,10 @@ public class BatchConfiguration {
 
     @Autowired
     public JobBuilderFactory jobBuilderFactory;
-
-
-    @Autowired
-    Producer producer;
-
     @Autowired
     public StepBuilderFactory stepBuilderFactory;
-
+    @Autowired
+    Producer producer;
 
     @Bean
     public FlatFileItemReader<Person> reader() {

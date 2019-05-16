@@ -13,18 +13,53 @@ services:
       RABBITMQ_DEFAULT_USER: "rabbitmq"
       RABBITMQ_DEFAULT_PASS: "rabbitmq"
       RABBITMQ_DEFAULT_VHOST: "/"
+  elk:
+    image: 'sebp/elk'
+    container_name: elk
+    ports:
+      - "5601:5601"
+      - "9200:9200"
+      - "5044:5044"
+      - "9300:9300"
+    volumes:
+      - mongodbdata:/data/db
+    environment:
+
+      MONGO_INITDB_DATABASE: 'mongodb'
+      MONGO_INITDB_ROOT_USERNAME: 'mongodb'
+      MONGO_INITDB_ROOT_PASSWORD: 'mongodb'
+
   mongodb:
     image: 'mongo:3.4.1'
     container_name: mongodb
     ports:
       - "27017:27017"
     volumes:
-      - mongodbdata:/data/db
+      - elkdbdata:/data/db
     environment:
 
       MONGO_INITDB_DATABASE: 'mongodb'
-      MONGO_INITDB_ROOT_USERNAME : 'mongodb'
-      MONGO_INITDB_ROOT_PASSWORD : 'mongodb'
+      MONGO_INITDB_ROOT_USERNAME: 'mongodb'
+      MONGO_INITDB_ROOT_PASSWORD: 'mongodb'
+  db:
+    image: mysql:5.7
+    container_name: database
+    volumes:
+      - dbdata:/var/lib/mysql
+    restart: always
+    command: --lower_case_table_names=1
+    ports:
+      - "3306:3306"
+
+    environment:
+      EXTRA_OPTS: "--lower_case_table_names=0"
+      MYSQL_ROOT_PASSWORD: springamq
+      MYSQL_DATABASE: springamq
+      MYSQL_USER: springamq
+      MYSQL_PASSWORD: springamq
 volumes:
   rabbitmqdata:
+  elkdbdata:
   mongodbdata:
+  dbdata:
+# about elk https://elk-docker.readthedocs.io/
