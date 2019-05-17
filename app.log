@@ -1,0 +1,481 @@
+2019-05-17 09:57:06.450  INFO 12804 --- [main] c.e.c.a.AmqfromjuanApplication           : Starting AmqfromjuanApplication on WAS-FPJ2XT2 with PID 12804 (C:\Users\jumosque\Downloads\amqfromjuan\amqfromjuan\target\classes started by jumosque in C:\Users\jumosque\Downloads\amqfromjuan\amqfromjuan)
+2019-05-17 09:57:06.453  INFO 12804 --- [main] c.e.c.a.AmqfromjuanApplication           : No active profile set, falling back to default profiles: default
+2019-05-17 09:57:07.062  INFO 12804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-17 09:57:07.135  INFO 12804 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67ms. Found 1 repository interfaces.
+2019-05-17 09:57:08.016  INFO 12804 --- [main] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-05-17 09:57:08.016  INFO 12804 --- [main] o.m.d.cluster                            : Adding discovered server localhost:27017 to client view of cluster
+2019-05-17 09:57:08.141  INFO 12804 --- [cluster-ClusterId{value='5cdebdb4d8beb976079fdf90', description='null'}-localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:1, serverValue:15}] to localhost:27017
+2019-05-17 09:57:08.146  INFO 12804 --- [cluster-ClusterId{value='5cdebdb4d8beb976079fdf90', description='null'}-localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 1]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=2841926}
+2019-05-17 09:57:08.148  INFO 12804 --- [cluster-ClusterId{value='5cdebdb4d8beb976079fdf90', description='null'}-localhost:27017] o.m.d.cluster                            : Discovered cluster type of STANDALONE
+2019-05-17 09:57:09.088  INFO 12804 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-05-17 09:57:09.651  INFO 12804 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-05-17 09:57:09.662  INFO 12804 --- [main] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2019-05-17 09:57:09.919  INFO 12804 --- [main] o.s.b.c.l.s.SimpleJobLauncher            : No TaskExecutor has been set, defaulting to synchronous executor.
+2019-05-17 09:57:10.283  INFO 12804 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-05-17 09:57:10.439  INFO 12804 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#7a8136b3:0/SimpleConnection@7f4701b1 [delegate=amqp://rabbitmq@127.0.0.1:5672/, localPort= 53021]
+2019-05-17 09:57:10.576  INFO 12804 --- [main] c.e.c.a.AmqfromjuanApplication           : Started AmqfromjuanApplication in 4.777 seconds (JVM running for 5.709)
+2019-05-17 09:57:10.579  INFO 12804 --- [main] o.s.b.a.b.JobLauncherCommandLineRunner   : Running default command line with: []
+2019-05-17 09:57:10.886  INFO 12804 --- [main] o.s.b.c.l.s.SimpleJobLauncher            : Job: [FlowJob: [name=importUserJob]] launched with the following parameters: [{run.id=37}]
+2019-05-17 09:57:11.029  INFO 12804 --- [main] o.s.b.c.j.SimpleStepHandler              : Executing step: [step1]
+2019-05-17 09:57:11.169  INFO 12804 --- [main] c.e.c.a.p.PersonItemProcessor            : Converting (Person(commentId=null, lastName=Doe, firstName=Jill, seq=0)) into (Person(commentId=null, lastName=DOE, firstName=JILL, seq=0))
+2019-05-17 09:57:11.169  INFO 12804 --- [main] c.e.c.a.p.PersonItemProcessor            : Converting (Person(commentId=null, lastName=Doe, firstName=Joe, seq=0)) into (Person(commentId=null, lastName=DOE, firstName=JOE, seq=0))
+2019-05-17 09:57:11.170  INFO 12804 --- [main] c.e.c.a.p.PersonItemProcessor            : Converting (Person(commentId=null, lastName=Doe, firstName=Justin, seq=0)) into (Person(commentId=null, lastName=DOE, firstName=JUSTIN, seq=0))
+2019-05-17 09:57:11.170  INFO 12804 --- [main] c.e.c.a.p.PersonItemProcessor            : Converting (Person(commentId=null, lastName=Doe, firstName=Jane, seq=0)) into (Person(commentId=null, lastName=DOE, firstName=JANE, seq=0))
+2019-05-17 09:57:11.170  INFO 12804 --- [main] c.e.c.a.p.PersonItemProcessor            : Converting (Person(commentId=null, lastName=Doe, firstName=John, seq=0)) into (Person(commentId=null, lastName=DOE, firstName=JOHN, seq=0))
+2019-05-17 09:57:11.190  INFO 12804 --- [main] c.e.c.a.a.Producer                       : I AM RABBIT MQ AND SOMEONE SEND SOMETHING TO OUR QUEUE Person(commentId=null, lastName=DOE, firstName=JILL, seq=0)
+2019-05-17 09:57:11.191  INFO 12804 --- [main] c.e.c.a.a.Producer                       : I AM RABBIT MQ AND SOMEONE SEND SOMETHING TO OUR QUEUE Person(commentId=null, lastName=DOE, firstName=JOE, seq=0)
+2019-05-17 09:57:11.192  INFO 12804 --- [main] c.e.c.a.a.Producer                       : I AM RABBIT MQ AND SOMEONE SEND SOMETHING TO OUR QUEUE Person(commentId=null, lastName=DOE, firstName=JUSTIN, seq=0)
+2019-05-17 09:57:11.192  INFO 12804 --- [main] c.e.c.a.a.Producer                       : I AM RABBIT MQ AND SOMEONE SEND SOMETHING TO OUR QUEUE Person(commentId=null, lastName=DOE, firstName=JANE, seq=0)
+2019-05-17 09:57:11.193  INFO 12804 --- [main] c.e.c.a.a.Producer                       : I AM RABBIT MQ AND SOMEONE SEND SOMETHING TO OUR QUEUE Person(commentId=null, lastName=DOE, firstName=JOHN, seq=0)
+2019-05-17 09:57:11.220  INFO 12804 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.c.a.p.PersonItemProcessor            : I am Rabbit Mq, I am reading my queue and I found : Person(commentId=null, lastName=DOE, firstName=JILL, seq=0)
+2019-05-17 09:57:11.313  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : !!! JOB FINISHED! Time to verify the results
+2019-05-17 09:57:11.341  INFO 12804 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.m.d.connection                         : Opened connection [connectionId{localValue:2, serverValue:16}] to localhost:27017
+2019-05-17 09:57:11.360  INFO 12804 --- [main] o.m.d.connection                         : Opened connection [connectionId{localValue:3, serverValue:17}] to localhost:27017
+2019-05-17 09:57:11.375  INFO 12804 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.c.a.p.PersonItemProcessor            : I'm taking this information and put on mongodb   Person(commentId=5cdebdb7d8beb976079fdf91, lastName=DOE, firstName=JILL, seq=0)
+2019-05-17 09:57:11.376  INFO 12804 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.c.a.p.PersonItemProcessor            : I am Rabbit Mq, I am reading my queue and I found : Person(commentId=null, lastName=DOE, firstName=JOE, seq=0)
+2019-05-17 09:57:11.381  INFO 12804 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.c.a.p.PersonItemProcessor            : I'm taking this information and put on mongodb   Person(commentId=5cdebdb7d8beb976079fdf92, lastName=DOE, firstName=JOE, seq=0)
+2019-05-17 09:57:11.383  INFO 12804 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.c.a.p.PersonItemProcessor            : I am Rabbit Mq, I am reading my queue and I found : Person(commentId=null, lastName=DOE, firstName=JUSTIN, seq=0)
+2019-05-17 09:57:11.390  INFO 12804 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.c.a.p.PersonItemProcessor            : I'm taking this information and put on mongodb   Person(commentId=5cdebdb7d8beb976079fdf93, lastName=DOE, firstName=JUSTIN, seq=0)
+2019-05-17 09:57:11.391  INFO 12804 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.c.a.p.PersonItemProcessor            : I am Rabbit Mq, I am reading my queue and I found : Person(commentId=null, lastName=DOE, firstName=JANE, seq=0)
+2019-05-17 09:57:11.397  INFO 12804 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.c.a.p.PersonItemProcessor            : I'm taking this information and put on mongodb   Person(commentId=5cdebdb7d8beb976079fdf94, lastName=DOE, firstName=JANE, seq=0)
+2019-05-17 09:57:11.398  INFO 12804 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.c.a.p.PersonItemProcessor            : I am Rabbit Mq, I am reading my queue and I found : Person(commentId=null, lastName=DOE, firstName=JOHN, seq=0)
+2019-05-17 09:57:11.401  INFO 12804 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.c.a.p.PersonItemProcessor            : I'm taking this information and put on mongodb   Person(commentId=5cdebdb7d8beb976079fdf95, lastName=DOE, firstName=JOHN, seq=0)
+2019-05-17 09:57:11.443  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc623c9211d05cd88c0a52, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.443  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc623c9211d05cd88c0a53, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.443  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc623c9211d05cd88c0a54, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.443  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc623c9211d05cd88c0a55, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.443  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc623c9211d05cd88c0a56, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.444  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc643c5b94e50086d32480, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.444  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc643c5b94e50086d32481, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.444  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc643c5b94e50086d32482, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.444  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc643c5b94e50086d32483, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.444  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc643c5b94e50086d32484, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.445  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc7c15309e2775befb0856, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.445  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc7c15309e2775befb0857, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.445  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc7c15309e2775befb0858, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.445  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc7c15309e2775befb0859, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.445  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc7c15309e2775befb085a, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.445  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc89df6c9dcf0ae34894a2, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.445  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc89df6c9dcf0ae34894a3, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.446  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc89df6c9dcf0ae34894a4, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.446  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc89df6c9dcf0ae34894a5, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.446  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc89df6c9dcf0ae34894a6, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.446  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc8a421af48c0d048f5a0d, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.446  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc8a421af48c0d048f5a0e, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.446  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc8a421af48c0d048f5a0f, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.446  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc8a421af48c0d048f5a10, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.447  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc8a421af48c0d048f5a11, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.447  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc8a8242d0775e7e0827a5, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.447  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc8a8242d0775e7e0827a6, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.447  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc8a8242d0775e7e0827a7, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.447  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc8a8342d0775e7e0827a8, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.447  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc8a8342d0775e7e0827a9, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.447  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd7c5648dec005433146cd, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.447  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd7c5648dec005433146ce, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.448  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd7c5648dec005433146cf, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.448  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd7c5648dec005433146d0, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.448  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd7c5648dec005433146d1, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.448  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd7f2d72736a2b0d034aca, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.448  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd7f2d72736a2b0d034acb, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.448  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd7f2d72736a2b0d034acc, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.448  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd7f2d72736a2b0d034acd, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.448  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd7f2d72736a2b0d034ace, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.449  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd809e6842764f2d6a7332, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.449  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd809e6842764f2d6a7333, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.449  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd809e6842764f2d6a7334, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.449  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd809e6842764f2d6a7335, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.449  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd809e6842764f2d6a7336, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.449  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd827531e2163db127090b, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.449  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd827531e2163db127090c, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.449  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd827531e2163db127090d, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.450  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd827531e2163db127090e, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.450  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd827531e2163db127090f, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.450  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd82e1ad37a83247e79dca, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.450  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd82e1ad37a83247e79dcb, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.450  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd82e1ad37a83247e79dcc, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.450  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd82e1ad37a83247e79dcd, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.450  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd82e1ad37a83247e79dce, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.450  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd8322edb9d6714e08fa3d, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.450  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd8322edb9d6714e08fa3e, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.451  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd8322edb9d6714e08fa3f, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.451  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd8322edb9d6714e08fa40, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.451  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd8322edb9d6714e08fa41, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.451  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd842b5c6aba694832cc58, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.451  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd842c5c6aba694832cc59, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.451  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd842c5c6aba694832cc5a, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.451  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd842c5c6aba694832cc5b, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.451  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd842c5c6aba694832cc5c, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.451  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd89b9fd6def0802a82102, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.451  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd89b9fd6def0802a82103, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.452  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd89b9fd6def0802a82104, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.452  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd89bafd6def0802a82105, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.452  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd89bafd6def0802a82106, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.452  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd9090fd6def0802a82107, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.452  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd9090fd6def0802a82108, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.452  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd9090fd6def0802a82109, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.452  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd90905c8af16335de40b5, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.453  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd90905c8af16335de40b6, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.453  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd90f6fd6def0802a8210a, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.453  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd90f6fd6def0802a8210b, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.453  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd90f6fd6def0802a8210c, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.453  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd90f612addd178f614853, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.453  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd90f612addd178f614854, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.453  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd914dfd6def0802a8210d, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.453  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd914dfd6def0802a8210e, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.453  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd914dfd6def0802a8210f, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.453  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd914d9a6d832a57e4b19f, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.454  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd914d9a6d832a57e4b1a0, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.454  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd916222895b58675629eb, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.454  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd916222895b58675629ec, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.454  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd916222895b58675629ed, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.454  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd916222895b58675629ee, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.454  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd916222895b58675629ef, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.454  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd91f13b71296061b34cff, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.454  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd91f13b71296061b34d00, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.455  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd91f13b71296061b34d01, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.455  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd91f13b71296061b34d02, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.455  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd91f13b71296061b34d03, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.455  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd939321aa850bdbc3839e, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.455  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd939321aa850bdbc3839f, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.455  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd939321aa850bdbc383a0, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.455  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd939321aa850bdbc383a1, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.455  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd939321aa850bdbc383a2, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.455  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd9403cddfd45e409f337b, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.456  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd9403cddfd45e409f337c, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.456  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd9403cddfd45e409f337d, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.456  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd9403cddfd45e409f337e, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.456  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd9403cddfd45e409f337f, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.456  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd94a898d4fc1b8632a8df, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.456  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd94a898d4fc1b8632a8e0, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.456  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd94a898d4fc1b8632a8e1, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.456  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd94a898d4fc1b8632a8e2, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.456  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd94a898d4fc1b8632a8e3, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.457  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd95d622536b73fd34a544, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.457  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd95d722536b73fd34a545, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.457  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd95d722536b73fd34a546, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.457  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd95d722536b73fd34a547, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.457  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd95d722536b73fd34a548, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.457  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda91a3fea2229ce78bb31, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.457  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda91a3fea2229ce78bb32, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.457  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda91a3fea2229ce78bb33, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.458  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda91a3fea2229ce78bb34, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.458  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda91a3fea2229ce78bb35, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.458  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda988adbd47685180c1f4, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.458  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda989adbd47685180c1f5, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.458  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda989adbd47685180c1f6, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.458  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda989adbd47685180c1f7, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.458  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda989adbd47685180c1f8, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.459  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda9e77c9e4b7b4a301f16, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.459  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda9e77c9e4b7b4a301f17, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.459  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda9e77c9e4b7b4a301f18, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.459  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda9e77c9e4b7b4a301f19, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.459  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda9e77c9e4b7b4a301f1a, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.459  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddaae950d9e77dfbd1931b, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.459  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddaae950d9e77dfbd1931c, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.459  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddaae950d9e77dfbd1931d, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.460  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddaae950d9e77dfbd1931e, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.460  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddaae950d9e77dfbd1931f, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.460  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddab43440b47574a3ff4ed, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.460  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddab43440b47574a3ff4ee, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.460  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddab43440b47574a3ff4ef, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.460  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddab43440b47574a3ff4f0, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.461  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddab43440b47574a3ff4f1, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.461  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddac37f9750a60ca098466, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.461  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddac37f9750a60ca098467, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.462  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddac37f9750a60ca098468, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.462  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddac37f9750a60ca098469, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.462  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddac37f9750a60ca09846a, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.462  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddad340469172c2eeb1684, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.462  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddad340469172c2eeb1685, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.462  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddad340469172c2eeb1686, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.463  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddad340469172c2eeb1687, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.463  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddad340469172c2eeb1688, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.463  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddad70a63b531999e39c38, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.463  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddad70a63b531999e39c39, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.464  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddad70a63b531999e39c3a, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.464  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddad70a63b531999e39c3b, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.464  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddad70a63b531999e39c3c, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.464  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddadba9efaf45c953734c7, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.464  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddadba9efaf45c953734c8, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.464  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddadba9efaf45c953734c9, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.464  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddadba9efaf45c953734ca, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.464  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddadba9efaf45c953734cb, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.464  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddadc785e0ff3552647513, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.464  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddadc785e0ff3552647514, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.465  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddadc785e0ff3552647515, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.465  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddadc785e0ff3552647516, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.465  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddadc785e0ff3552647517, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.465  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddcf7b72c3b6145fa9121b, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.465  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddcf7c72c3b6145fa9121c, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.465  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddcf7c72c3b6145fa9121d, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.465  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddcf7c72c3b6145fa9121e, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.465  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddcf7c72c3b6145fa9121f, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.465  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddd659fe246c33f03d5944, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.465  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddd659fe246c33f03d5945, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.465  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddd659fe246c33f03d5946, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.465  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddd659fe246c33f03d5947, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.465  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddd659fe246c33f03d5948, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.466  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebb2eaf28672f03503e48, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.466  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebb2eaf28672f03503e49, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.466  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebb2eaf28672f03503e4a, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.466  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebb2eaf28672f03503e4b, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.466  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebb2eaf28672f03503e4c, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.466  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebc159246d81454d6773c, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.466  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebc159246d81454d6773d, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.466  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebc159246d81454d6773e, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.466  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebc159246d81454d6773f, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.466  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebc159246d81454d67740, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.466  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebc89855a7b4dd1815718, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.466  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebc89855a7b4dd1815719, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.466  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebc89855a7b4dd181571a, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.467  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebc89855a7b4dd181571b, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.467  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebc89855a7b4dd181571c, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.467  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebdb7d8beb976079fdf91, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:57:11.467  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebdb7d8beb976079fdf92, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:57:11.467  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebdb7d8beb976079fdf93, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:57:11.467  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebdb7d8beb976079fdf94, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:57:11.467  INFO 12804 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebdb7d8beb976079fdf95, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:57:11.484  INFO 12804 --- [main] o.s.b.c.l.s.SimpleJobLauncher            : Job: [FlowJob: [name=importUserJob]] completed with the following parameters: [{run.id=37}] and the following status: [COMPLETED]
+2019-05-17 09:58:07.265  INFO 4148 --- [main] c.e.c.a.AmqfromjuanApplication           : Starting AmqfromjuanApplication on WAS-FPJ2XT2 with PID 4148 (C:\Users\jumosque\Downloads\amqfromjuan\amqfromjuan\target\classes started by jumosque in C:\Users\jumosque\Downloads\amqfromjuan\amqfromjuan)
+2019-05-17 09:58:07.269  INFO 4148 --- [main] c.e.c.a.AmqfromjuanApplication           : No active profile set, falling back to default profiles: default
+2019-05-17 09:58:07.953  INFO 4148 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-17 09:58:08.071  INFO 4148 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110ms. Found 1 repository interfaces.
+2019-05-17 09:58:09.131  INFO 4148 --- [main] o.m.d.cluster                            : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-05-17 09:58:09.132  INFO 4148 --- [main] o.m.d.cluster                            : Adding discovered server localhost:27017 to client view of cluster
+2019-05-17 09:58:09.281  INFO 4148 --- [cluster-ClusterId{value='5cdebdf1ea1ae7130bfc9fbb', description='null'}-localhost:27017] o.m.d.connection                         : Opened connection [connectionId{localValue:1, serverValue:18}] to localhost:27017
+2019-05-17 09:58:09.294  INFO 4148 --- [cluster-ClusterId{value='5cdebdf1ea1ae7130bfc9fbb', description='null'}-localhost:27017] o.m.d.cluster                            : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 1]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=10372869}
+2019-05-17 09:58:09.296  INFO 4148 --- [cluster-ClusterId{value='5cdebdf1ea1ae7130bfc9fbb', description='null'}-localhost:27017] o.m.d.cluster                            : Discovered cluster type of STANDALONE
+2019-05-17 09:58:10.470  INFO 4148 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-05-17 09:58:11.047  INFO 4148 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-05-17 09:58:11.054  INFO 4148 --- [main] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2019-05-17 09:58:11.293  INFO 4148 --- [main] o.s.b.c.l.s.SimpleJobLauncher            : No TaskExecutor has been set, defaulting to synchronous executor.
+2019-05-17 09:58:11.955  INFO 4148 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2019-05-17 09:58:12.388  INFO 4148 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#ce9b9a9:0/SimpleConnection@670f2466 [delegate=amqp://rabbitmq@127.0.0.1:5672/, localPort= 53057]
+2019-05-17 09:58:12.474  INFO 4148 --- [main] c.e.c.a.AmqfromjuanApplication           : Started AmqfromjuanApplication in 5.797 seconds (JVM running for 7.047)
+2019-05-17 09:58:12.475  INFO 4148 --- [main] o.s.b.a.b.JobLauncherCommandLineRunner   : Running default command line with: []
+2019-05-17 09:58:12.719  INFO 4148 --- [main] o.s.b.c.l.s.SimpleJobLauncher            : Job: [FlowJob: [name=importUserJob]] launched with the following parameters: [{run.id=38}]
+2019-05-17 09:58:12.936  INFO 4148 --- [main] o.s.b.c.j.SimpleStepHandler              : Executing step: [step1]
+2019-05-17 09:58:13.038  INFO 4148 --- [main] c.e.c.a.p.PersonItemProcessor            : Converting (Person(commentId=null, lastName=Doe, firstName=Jill, seq=0)) into (Person(commentId=null, lastName=DOE, firstName=JILL, seq=0))
+2019-05-17 09:58:13.038  INFO 4148 --- [main] c.e.c.a.p.PersonItemProcessor            : Converting (Person(commentId=null, lastName=Doe, firstName=Joe, seq=0)) into (Person(commentId=null, lastName=DOE, firstName=JOE, seq=0))
+2019-05-17 09:58:13.039  INFO 4148 --- [main] c.e.c.a.p.PersonItemProcessor            : Converting (Person(commentId=null, lastName=Doe, firstName=Justin, seq=0)) into (Person(commentId=null, lastName=DOE, firstName=JUSTIN, seq=0))
+2019-05-17 09:58:13.039  INFO 4148 --- [main] c.e.c.a.p.PersonItemProcessor            : Converting (Person(commentId=null, lastName=Doe, firstName=Jane, seq=0)) into (Person(commentId=null, lastName=DOE, firstName=JANE, seq=0))
+2019-05-17 09:58:13.039  INFO 4148 --- [main] c.e.c.a.p.PersonItemProcessor            : Converting (Person(commentId=null, lastName=Doe, firstName=John, seq=0)) into (Person(commentId=null, lastName=DOE, firstName=JOHN, seq=0))
+2019-05-17 09:58:13.056  INFO 4148 --- [main] c.e.c.a.a.Producer                       : I AM RABBIT MQ AND SOMEONE SEND SOMETHING TO OUR QUEUE Person(commentId=null, lastName=DOE, firstName=JILL, seq=0)
+2019-05-17 09:58:13.056  INFO 4148 --- [main] c.e.c.a.a.Producer                       : I AM RABBIT MQ AND SOMEONE SEND SOMETHING TO OUR QUEUE Person(commentId=null, lastName=DOE, firstName=JOE, seq=0)
+2019-05-17 09:58:13.057  INFO 4148 --- [main] c.e.c.a.a.Producer                       : I AM RABBIT MQ AND SOMEONE SEND SOMETHING TO OUR QUEUE Person(commentId=null, lastName=DOE, firstName=JUSTIN, seq=0)
+2019-05-17 09:58:13.057  INFO 4148 --- [main] c.e.c.a.a.Producer                       : I AM RABBIT MQ AND SOMEONE SEND SOMETHING TO OUR QUEUE Person(commentId=null, lastName=DOE, firstName=JANE, seq=0)
+2019-05-17 09:58:13.057  INFO 4148 --- [main] c.e.c.a.a.Producer                       : I AM RABBIT MQ AND SOMEONE SEND SOMETHING TO OUR QUEUE Person(commentId=null, lastName=DOE, firstName=JOHN, seq=0)
+2019-05-17 09:58:13.087  INFO 4148 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.c.a.p.PersonItemProcessor            : I am Rabbit Mq, I am reading my queue and I found : Person(commentId=null, lastName=DOE, firstName=JILL, seq=0)
+2019-05-17 09:58:13.161  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : !!! JOB FINISHED! Time to verify the results
+2019-05-17 09:58:13.259  INFO 4148 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.m.d.connection                         : Opened connection [connectionId{localValue:2, serverValue:19}] to localhost:27017
+2019-05-17 09:58:13.268  INFO 4148 --- [main] o.m.d.connection                         : Opened connection [connectionId{localValue:3, serverValue:20}] to localhost:27017
+2019-05-17 09:58:13.292  INFO 4148 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.c.a.p.PersonItemProcessor            : I'm taking this information and put on mongodb   Person(commentId=5cdebdf5ea1ae7130bfc9fbc, lastName=DOE, firstName=JILL, seq=0)
+2019-05-17 09:58:13.293  INFO 4148 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.c.a.p.PersonItemProcessor            : I am Rabbit Mq, I am reading my queue and I found : Person(commentId=null, lastName=DOE, firstName=JOE, seq=0)
+2019-05-17 09:58:13.296  INFO 4148 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.c.a.p.PersonItemProcessor            : I'm taking this information and put on mongodb   Person(commentId=5cdebdf5ea1ae7130bfc9fbd, lastName=DOE, firstName=JOE, seq=0)
+2019-05-17 09:58:13.297  INFO 4148 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.c.a.p.PersonItemProcessor            : I am Rabbit Mq, I am reading my queue and I found : Person(commentId=null, lastName=DOE, firstName=JUSTIN, seq=0)
+2019-05-17 09:58:13.301  INFO 4148 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.c.a.p.PersonItemProcessor            : I'm taking this information and put on mongodb   Person(commentId=5cdebdf5ea1ae7130bfc9fbe, lastName=DOE, firstName=JUSTIN, seq=0)
+2019-05-17 09:58:13.301  INFO 4148 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.c.a.p.PersonItemProcessor            : I am Rabbit Mq, I am reading my queue and I found : Person(commentId=null, lastName=DOE, firstName=JANE, seq=0)
+2019-05-17 09:58:13.304  INFO 4148 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.c.a.p.PersonItemProcessor            : I'm taking this information and put on mongodb   Person(commentId=5cdebdf5ea1ae7130bfc9fbf, lastName=DOE, firstName=JANE, seq=0)
+2019-05-17 09:58:13.305  INFO 4148 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.c.a.p.PersonItemProcessor            : I am Rabbit Mq, I am reading my queue and I found : Person(commentId=null, lastName=DOE, firstName=JOHN, seq=0)
+2019-05-17 09:58:13.308  INFO 4148 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.e.c.a.p.PersonItemProcessor            : I'm taking this information and put on mongodb   Person(commentId=5cdebdf5ea1ae7130bfc9fc0, lastName=DOE, firstName=JOHN, seq=0)
+2019-05-17 09:58:13.353  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc623c9211d05cd88c0a52, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.353  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc623c9211d05cd88c0a53, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.353  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc623c9211d05cd88c0a54, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.354  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc623c9211d05cd88c0a55, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.354  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc623c9211d05cd88c0a56, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.354  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc643c5b94e50086d32480, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.354  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc643c5b94e50086d32481, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.354  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc643c5b94e50086d32482, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.354  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc643c5b94e50086d32483, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.354  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc643c5b94e50086d32484, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.355  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc7c15309e2775befb0856, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.355  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc7c15309e2775befb0857, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.355  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc7c15309e2775befb0858, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.355  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc7c15309e2775befb0859, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.355  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc7c15309e2775befb085a, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.355  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc89df6c9dcf0ae34894a2, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.355  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc89df6c9dcf0ae34894a3, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.356  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc89df6c9dcf0ae34894a4, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.356  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc89df6c9dcf0ae34894a5, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.356  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc89df6c9dcf0ae34894a6, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.356  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc8a421af48c0d048f5a0d, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.357  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc8a421af48c0d048f5a0e, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.357  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc8a421af48c0d048f5a0f, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.357  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc8a421af48c0d048f5a10, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.357  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc8a421af48c0d048f5a11, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.357  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc8a8242d0775e7e0827a5, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.358  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc8a8242d0775e7e0827a6, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.358  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc8a8242d0775e7e0827a7, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.358  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc8a8342d0775e7e0827a8, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.358  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdc8a8342d0775e7e0827a9, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.358  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd7c5648dec005433146cd, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.359  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd7c5648dec005433146ce, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.359  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd7c5648dec005433146cf, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.359  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd7c5648dec005433146d0, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.359  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd7c5648dec005433146d1, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.359  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd7f2d72736a2b0d034aca, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.359  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd7f2d72736a2b0d034acb, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.360  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd7f2d72736a2b0d034acc, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.360  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd7f2d72736a2b0d034acd, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.360  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd7f2d72736a2b0d034ace, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.360  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd809e6842764f2d6a7332, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.360  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd809e6842764f2d6a7333, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.361  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd809e6842764f2d6a7334, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.361  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd809e6842764f2d6a7335, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.361  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd809e6842764f2d6a7336, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.361  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd827531e2163db127090b, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.361  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd827531e2163db127090c, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.362  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd827531e2163db127090d, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.362  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd827531e2163db127090e, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.362  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd827531e2163db127090f, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.362  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd82e1ad37a83247e79dca, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.362  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd82e1ad37a83247e79dcb, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.362  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd82e1ad37a83247e79dcc, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.362  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd82e1ad37a83247e79dcd, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.362  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd82e1ad37a83247e79dce, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.363  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd8322edb9d6714e08fa3d, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.363  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd8322edb9d6714e08fa3e, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.363  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd8322edb9d6714e08fa3f, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.363  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd8322edb9d6714e08fa40, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.363  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd8322edb9d6714e08fa41, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.363  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd842b5c6aba694832cc58, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.364  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd842c5c6aba694832cc59, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.364  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd842c5c6aba694832cc5a, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.364  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd842c5c6aba694832cc5b, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.364  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd842c5c6aba694832cc5c, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.364  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd89b9fd6def0802a82102, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.365  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd89b9fd6def0802a82103, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.365  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd89b9fd6def0802a82104, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.365  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd89bafd6def0802a82105, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.365  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd89bafd6def0802a82106, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.365  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd9090fd6def0802a82107, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.365  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd9090fd6def0802a82108, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.365  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd9090fd6def0802a82109, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.366  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd90905c8af16335de40b5, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.366  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd90905c8af16335de40b6, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.366  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd90f6fd6def0802a8210a, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.366  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd90f6fd6def0802a8210b, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.366  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd90f6fd6def0802a8210c, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.366  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd90f612addd178f614853, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.366  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd90f612addd178f614854, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.367  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd914dfd6def0802a8210d, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.367  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd914dfd6def0802a8210e, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.367  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd914dfd6def0802a8210f, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.367  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd914d9a6d832a57e4b19f, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.367  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd914d9a6d832a57e4b1a0, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.367  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd916222895b58675629eb, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.368  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd916222895b58675629ec, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.368  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd916222895b58675629ed, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.368  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd916222895b58675629ee, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.368  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd916222895b58675629ef, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.368  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd91f13b71296061b34cff, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.369  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd91f13b71296061b34d00, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.369  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd91f13b71296061b34d01, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.369  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd91f13b71296061b34d02, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.369  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd91f13b71296061b34d03, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.369  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd939321aa850bdbc3839e, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.369  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd939321aa850bdbc3839f, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.369  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd939321aa850bdbc383a0, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.369  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd939321aa850bdbc383a1, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.370  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd939321aa850bdbc383a2, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.370  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd9403cddfd45e409f337b, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.370  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd9403cddfd45e409f337c, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.370  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd9403cddfd45e409f337d, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.370  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd9403cddfd45e409f337e, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.370  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd9403cddfd45e409f337f, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.371  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd94a898d4fc1b8632a8df, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.371  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd94a898d4fc1b8632a8e0, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.371  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd94a898d4fc1b8632a8e1, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.371  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd94a898d4fc1b8632a8e2, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.371  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd94a898d4fc1b8632a8e3, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.371  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd95d622536b73fd34a544, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.371  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd95d722536b73fd34a545, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.372  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd95d722536b73fd34a546, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.372  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd95d722536b73fd34a547, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.372  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdd95d722536b73fd34a548, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.372  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda91a3fea2229ce78bb31, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.372  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda91a3fea2229ce78bb32, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.372  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda91a3fea2229ce78bb33, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.373  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda91a3fea2229ce78bb34, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.373  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda91a3fea2229ce78bb35, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.373  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda988adbd47685180c1f4, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.373  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda989adbd47685180c1f5, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.373  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda989adbd47685180c1f6, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.373  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda989adbd47685180c1f7, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.374  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda989adbd47685180c1f8, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.374  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda9e77c9e4b7b4a301f16, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.374  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda9e77c9e4b7b4a301f17, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.374  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda9e77c9e4b7b4a301f18, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.374  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda9e77c9e4b7b4a301f19, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.374  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdda9e77c9e4b7b4a301f1a, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.375  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddaae950d9e77dfbd1931b, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.375  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddaae950d9e77dfbd1931c, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.375  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddaae950d9e77dfbd1931d, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.375  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddaae950d9e77dfbd1931e, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.375  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddaae950d9e77dfbd1931f, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.376  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddab43440b47574a3ff4ed, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.376  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddab43440b47574a3ff4ee, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.376  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddab43440b47574a3ff4ef, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.376  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddab43440b47574a3ff4f0, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.376  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddab43440b47574a3ff4f1, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.376  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddac37f9750a60ca098466, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.377  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddac37f9750a60ca098467, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.377  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddac37f9750a60ca098468, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.377  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddac37f9750a60ca098469, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.377  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddac37f9750a60ca09846a, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.377  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddad340469172c2eeb1684, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.377  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddad340469172c2eeb1685, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.377  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddad340469172c2eeb1686, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.378  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddad340469172c2eeb1687, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.378  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddad340469172c2eeb1688, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.378  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddad70a63b531999e39c38, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.378  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddad70a63b531999e39c39, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.378  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddad70a63b531999e39c3a, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.378  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddad70a63b531999e39c3b, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.379  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddad70a63b531999e39c3c, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.379  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddadba9efaf45c953734c7, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.379  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddadba9efaf45c953734c8, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.379  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddadba9efaf45c953734c9, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.379  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddadba9efaf45c953734ca, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.379  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddadba9efaf45c953734cb, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.380  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddadc785e0ff3552647513, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.380  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddadc785e0ff3552647514, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.380  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddadc785e0ff3552647515, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.380  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddadc785e0ff3552647516, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.380  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddadc785e0ff3552647517, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.380  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddcf7b72c3b6145fa9121b, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.380  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddcf7c72c3b6145fa9121c, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.380  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddcf7c72c3b6145fa9121d, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.381  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddcf7c72c3b6145fa9121e, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.381  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddcf7c72c3b6145fa9121f, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.381  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddd659fe246c33f03d5944, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.381  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddd659fe246c33f03d5945, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.381  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddd659fe246c33f03d5946, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.381  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddd659fe246c33f03d5947, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.381  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cddd659fe246c33f03d5948, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.381  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebb2eaf28672f03503e48, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.381  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebb2eaf28672f03503e49, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.381  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebb2eaf28672f03503e4a, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.382  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebb2eaf28672f03503e4b, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.382  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebb2eaf28672f03503e4c, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.382  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebc159246d81454d6773c, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.382  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebc159246d81454d6773d, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.382  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebc159246d81454d6773e, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.382  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebc159246d81454d6773f, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.382  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebc159246d81454d67740, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.382  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebc89855a7b4dd1815718, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.382  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebc89855a7b4dd1815719, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.382  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebc89855a7b4dd181571a, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.382  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebc89855a7b4dd181571b, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.382  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebc89855a7b4dd181571c, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.382  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebdb7d8beb976079fdf91, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.383  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebdb7d8beb976079fdf92, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.383  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebdb7d8beb976079fdf93, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.383  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebdb7d8beb976079fdf94, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.383  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebdb7d8beb976079fdf95, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.383  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebdf5ea1ae7130bfc9fbc, lastName=DOE, firstName=JILL, seq=0)> in the database.
+2019-05-17 09:58:13.383  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebdf5ea1ae7130bfc9fbd, lastName=DOE, firstName=JOE, seq=0)> in the database.
+2019-05-17 09:58:13.383  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebdf5ea1ae7130bfc9fbe, lastName=DOE, firstName=JUSTIN, seq=0)> in the database.
+2019-05-17 09:58:13.383  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebdf5ea1ae7130bfc9fbf, lastName=DOE, firstName=JANE, seq=0)> in the database.
+2019-05-17 09:58:13.383  INFO 4148 --- [main] .c.a.n.JobCompletionNotificationListener : Found <Person(commentId=5cdebdf5ea1ae7130bfc9fc0, lastName=DOE, firstName=JOHN, seq=0)> in the database.
+2019-05-17 09:58:13.415  INFO 4148 --- [main] o.s.b.c.l.s.SimpleJobLauncher            : Job: [FlowJob: [name=importUserJob]] completed with the following parameters: [{run.id=38}] and the following status: [COMPLETED]
